@@ -86,7 +86,6 @@ const gameOver = () => {
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
     <button onclick="closeModal()">Close</button>
   `;
-  console.log(errorCount);
   addHistory(questionText, timeTaken, errorCount);
 
   // restart everything
