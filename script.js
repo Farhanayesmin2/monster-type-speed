@@ -26,6 +26,7 @@ const typeController = (e) => {
   // Handle backspace press
   if (newLetter == "Backspace") {
     userText = userText.slice(0, userText.length - 1);
+    errorCount++;
     return display.removeChild(display.lastChild);
   }
 
@@ -68,24 +69,24 @@ const gameOver = () => {
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
   const timeTaken = (finishTime - startTime) / 1000;
-
-  // show result modal
-  resultModal.innerHTML = "";
-  resultModal.classList.toggle("hidden");
-  modalBackground.classList.toggle("hidden");
-  // clear user text
-  display.innerHTML = "";
-  // make it inactive
-  display.classList.add("inactive");
-  // show result
-
-  resultModal.innerHTML += `
+  
+    // show result modal
+    resultModal.innerHTML = "";
+    resultModal.classList.toggle("hidden");
+    modalBackground.classList.toggle("hidden");
+    // clear user text
+    display.innerHTML = "";
+    // make it inactive
+    display.classList.add("inactive");
+    // show result
+   
+    resultModal.innerHTML += `
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
     <button onclick="closeModal()">Close</button>
   `;
-
+  console.log(errorCount);
   addHistory(questionText, timeTaken, errorCount);
 
   // restart everything
@@ -141,5 +142,5 @@ setInterval(() => {
   const timeSpent = (currentTime - startTime) / 1000;
 
 
-  document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
+  document.getElementById("show-time").innerHTML = `${startTime ? parseInt(timeSpent) : 0} seconds`;
 }, 1000);
