@@ -19,27 +19,27 @@
       class="card mb-3 container border border-2 border-info shadow-lg mt-5 py-3"
     >
       <div class="card-body">
-        <h3 class="card-title text-center">
+        <h3 class="card-title text-center text-dark">
           Difference between local storage and session storage.
         </h3>
-        <p class="card-text"></p>
+        <p class="card-text">
+          <strong> Local Storage and Session Storage</strong> are almost the
+          same.<br />
+          <b>Both have the following rules: </b> They store key/value pairs for
+          a particular domain. The values stored may only be strings. They have
+          a limit of around 5MB of storage space. The one major difference
+          between localStorage and sessionStorage is the expiration date.
+          localStorage persists the storage across browser sessions. So even if
+          the domain is opened in a new tab, or the browser is closed and
+          reopened, the storage is saved. There is no expiration. sessionStorage
+          is cleared when the page session ends. A page session lasts as long as
+          the tab or the browser is open. Therefore, when you open a new tab or
+          a new window, this creates a new session and new storage.
+        </p>
         <p class="card-text">
           <small class="text-muted">Last updated 3 mins ago</small>
         </p>
       </div>
-    </div>
-    <div class="card container">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-          This is a wider card with supporting text below as a natural lead-in
-          to additional content. This content is a little bit longer.
-        </p>
-        <p class="card-text">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </p>
-      </div>
-      <img src="..." class="card-img-bottom" alt="..." />
     </div>
 
     <script
