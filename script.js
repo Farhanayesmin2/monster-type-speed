@@ -78,6 +78,7 @@ const gameOver = () => {
   // make it inactive
   display.classList.add("inactive");
   // show result
+
   resultModal.innerHTML += `
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
@@ -114,7 +115,7 @@ const start = () => {
     if (count == 0) {
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
-      countdownOverlay.style.display ="flex";
+      countdownOverlay.style.display ="none";
       display.classList.remove("inactive");
 
       clearInterval(startCountdown);

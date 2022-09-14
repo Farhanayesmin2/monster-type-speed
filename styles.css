@@ -91,7 +91,6 @@ body {
   font-weight: 700;
 }
 .inactive {
-  display: none;
   border: 2px solid white !important;
 }
 .hidden {
@@ -143,7 +142,9 @@ button {
 }
 
 #histories {
+  
   display: flex;
+ 
   flex-wrap: wrap;
   justify-content: space-around;
 }
