@@ -183,6 +183,16 @@ button {
   position: fixed;
   top: 0;
 }
+.blog-post{
+  text-decoration: none;
+  color: rgb(249, 249, 249);
+}
+.post-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
 
 @media only screen and (max-width: 700px) {
   .box-container {
